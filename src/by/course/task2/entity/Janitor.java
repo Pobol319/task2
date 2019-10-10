@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public class Janitor extends ServiceStaff {
     private String schedule;

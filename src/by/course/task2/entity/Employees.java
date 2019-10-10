@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public abstract class Employees {
     private String name;

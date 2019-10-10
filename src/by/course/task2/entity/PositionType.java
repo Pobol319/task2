@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public enum PositionType {
     BA("BusinessAnalyst"),

@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public abstract class InformationTechnologySpecialists extends Employees {
     private String rank;

@@ -32,8 +32,8 @@ IT-фирма. Определить иерархию сотрудников. С�
 
 
 import by.course.task2.file_handler.EmployeesFromFile;
-import entity.BusinessAnalyst;
-import entity.Employees;
+import by.course.task2.entity.BusinessAnalyst;
+import by.course.task2.entity.Employees;
 
 public class Main {
     private static final String NUMBERS_FILE_PATH = "resources\\employees.txt";

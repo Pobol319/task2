@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public class BusinessAnalyst extends InformationTechnologySpecialists {
     private String levelOfEnglish;

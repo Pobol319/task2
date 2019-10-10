@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public class Developer extends InformationTechnologySpecialists {
     private String languageOfDevelopment;

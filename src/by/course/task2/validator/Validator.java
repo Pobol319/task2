@@ -1,7 +1,7 @@
 package by.course.task2.validator;
 
 import by.course.task2.reader.FieldsReader;
-import entity.PositionType;
+import by.course.task2.entity.PositionType;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

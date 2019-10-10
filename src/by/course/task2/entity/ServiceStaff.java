@@ -1,4 +1,4 @@
-package entity;
+package by.course.task2.entity;
 
 public abstract class ServiceStaff extends Employees {
     private String category;
