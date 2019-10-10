@@ -27,20 +27,25 @@ IT-фирма. Определить иерархию сотрудников. С�
 Провести сортировку сотрудников на основе одного и нескольких параметров. Найти сотрудника,
 соответствующего заданному диапазону зарплат.
 
-https://github.com/Hooperink/Java_0/blob/master/resource/voucher.txt
 
 */
 
 
+import by.course.task2.file_handler.EmployeesFromFile;
 import entity.BusinessAnalyst;
 import entity.Employees;
 
 public class Main {
+    private static final String NUMBERS_FILE_PATH = "resources\\employees.txt";
+
     public static void main(String[] args) {
 
-        Employees e1 = new BusinessAnalyst();
-         BusinessAnalyst e2 = new BusinessAnalyst();
-        e2.setName("Name");
+
+
+
+        EmployeesFromFile employeesFromFile = new EmployeesFromFile();
+        employeesFromFile.getEmployeesFromText(NUMBERS_FILE_PATH);
+
 
     }
 }
