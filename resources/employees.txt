@@ -1,1 +1,2 @@
-Position = BusinessAnalyst; Surname = Pobol; Name = Pavel; Salary = 450; Rank = Junior; Normal Hours = 10; Level Of English = B1;
+BusinessAnalyst,Pobol,Pavel,450,Junior,10,,B1,,,
+BusinessAnalyst,Vasin,Vadim,500,Junior,12,,B2,,,

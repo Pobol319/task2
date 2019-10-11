@@ -1,7 +1,6 @@
 package by.course.task2.file_handler;
 
-import by.course.task2.reader.FieldsReader;
-import by.course.task2.validator.Validator;
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,6 +8,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static by.course.task2.validator.Validator.isValidEmployee;
 
 public class EmployeesFromFile {
 
@@ -33,10 +34,10 @@ public class EmployeesFromFile {
         List<String> textFromFile = getTextFromFile(path);
 
         List<String> listOfEmployees = new ArrayList<>();
-        Validator validator = new Validator();
+
 
         for (String temp : textFromFile) {
-            if (validator.isValidEmployee(temp)) {
+            if (isValidEmployee(temp)) {
                 listOfEmployees.add(temp);
             }
         }

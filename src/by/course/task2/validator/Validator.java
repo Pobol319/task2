@@ -3,15 +3,30 @@ package by.course.task2.validator;
 import by.course.task2.reader.FieldsReader;
 import by.course.task2.entity.PositionType;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static by.course.task2.constant.RegularExpressions.*;
 
 public class Validator {
-    FieldsReader fieldsReader = new FieldsReader();
 
-    public boolean isValidEmployee(String temp) {
+
+    public static boolean isValidEmployee(String temp) {
+
+        String[] fieldsOfEmployee = temp.split(SPLIT_EXPRESSION);
+        System.out.println(Arrays.toString(fieldsOfEmployee));
+
+        Pattern positionPattern = Pattern.compile(POSITION_FIELD_EXPRESSION);
+        Matcher positionMatcher = positionPattern.matcher(fieldsOfEmployee[0]);
+
+        System.out.println(positionMatcher.matches());
+        return true;
+    }
+
+
+
+   /* public boolean isValidEmployee(String temp) {
         if (isValidPosition(temp)) {
             String position = fieldsReader.positionReader(temp);
             if (position.equals("BusinessAnalyst")) {
@@ -22,9 +37,9 @@ public class Validator {
         isValidPosition(temp);
         isValidRank(temp);
         return false;
-    }
+    }*/
 
-    private boolean isValidFieldsOfEmployee(String temp) {
+    /*private boolean isValidFieldsOfEmployee(String temp) {
         return true;
     }
 
@@ -52,7 +67,7 @@ public class Validator {
         System.out.println(matcher.group(1));
 
         return true;
-    }
+    }*/
 
 
 }

@@ -41,8 +41,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
-
         EmployeesFromFile employeesFromFile = new EmployeesFromFile();
         employeesFromFile.getEmployeesFromText(NUMBERS_FILE_PATH);
 

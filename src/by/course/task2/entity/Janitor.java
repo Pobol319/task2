@@ -1,6 +1,6 @@
 package by.course.task2.entity;
 
-public class Janitor extends ServiceStaff {
+public class Janitor extends Employees {
     private String schedule;
 
     public String getSchedule() {
