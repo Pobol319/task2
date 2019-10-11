@@ -1,13 +1,13 @@
 package by.course.task2.entity;
 
 public class Tester extends InformationTechnologySpecialists {
-    private String knowledgeOfAutomatization;
+    private String knowledgeOfAutomation;
 
-    public String getKnowledgeOfAutomatization() {
-        return knowledgeOfAutomatization;
+    public String getKnowledgeOfAutomation() {
+        return knowledgeOfAutomation;
     }
 
-    public void setKnowledgeOfAutomatization(String knowledgeOfAutomatization) {
-        this.knowledgeOfAutomatization = knowledgeOfAutomatization;
+    public void setKnowledgeOfAutomation(String knowledgeOfAutomation) {
+        this.knowledgeOfAutomation = knowledgeOfAutomation;
     }
 }

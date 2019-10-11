@@ -20,6 +20,20 @@ public class Validator {
         Pattern positionPattern = Pattern.compile(POSITION_FIELD_EXPRESSION);
         Matcher positionMatcher = positionPattern.matcher(fieldsOfEmployee[0]);
 
+        Pattern surnamePattern = Pattern.compile(SURNAME_FIELD_EXPRESSION);
+        Matcher surnameMatcher = positionPattern.matcher(fieldsOfEmployee[1]);
+
+        Pattern namePattern = Pattern.compile(POSITION_FIELD_EXPRESSION);
+        Matcher nameMatcher = positionPattern.matcher(fieldsOfEmployee[2]);
+
+        Pattern salaryPattern = Pattern.compile(POSITION_FIELD_EXPRESSION);
+        Matcher salaryMatcher = positionPattern.matcher(fieldsOfEmployee[3]);
+
+        Pattern rankPattern = Pattern.compile(POSITION_FIELD_EXPRESSION);
+        Matcher rankMatcher = positionPattern.matcher(fieldsOfEmployee[4]);
+
+        System.out.println(fieldsOfEmployee[6].equals(" "));
+
         System.out.println(positionMatcher.matches());
         return true;
     }
