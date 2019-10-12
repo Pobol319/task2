@@ -1,4 +1,4 @@
-package by.course.task2.constant;
+package by.course.task2.constants;
 
 public class ConstantsPool {
 

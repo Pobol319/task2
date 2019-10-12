@@ -1,4 +1,4 @@
-package by.course.task2.employees_comparator;
+package by.course.task2.main;
 
 /*
 Task
@@ -31,18 +31,26 @@ IT-фирма. Определить иерархию сотрудников. С�
 */
 
 
-import by.course.task2.file_handler.EmployeesFromFile;
-import by.course.task2.entity.BusinessAnalyst;
+
 import by.course.task2.entity.Employees;
+import by.course.task2.factory.EmployeeFactory;
+import by.course.task2.extractor.EmployeesFromFile;
+
+import java.util.List;
 
 public class Main {
-    private static final String NUMBERS_FILE_PATH = "resources\\employees.txt";
+    private static final String FILE_PATH = "resources\\employees.txt";
 
     public static void main(String[] args) {
 
-
         EmployeesFromFile employeesFromFile = new EmployeesFromFile();
-        employeesFromFile.getEmployeesFromText(NUMBERS_FILE_PATH);
+        List<String> employees = employeesFromFile.getEmployeesFromText(FILE_PATH);
+
+        EmployeeFactory employeeFactory = new EmployeeFactory();
+        
+
+
+
 
 
     }
