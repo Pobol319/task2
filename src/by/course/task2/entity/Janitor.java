@@ -1,13 +1,15 @@
 package by.course.task2.entity;
 
-public class Janitor extends Employees {
-    private String schedule;
+import by.course.task2.enums.JanitorScheduleEnum;
 
-    public String getSchedule() {
+public class Janitor extends Employee {
+    private JanitorScheduleEnum schedule;
+
+    public JanitorScheduleEnum getSchedule() {
         return schedule;
     }
 
-    public void setSchedule() {
+    public void setSchedule(JanitorScheduleEnum schedule) {
         this.schedule = schedule;
     }
 

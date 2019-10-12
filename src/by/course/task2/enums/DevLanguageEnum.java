@@ -1,6 +1,6 @@
-package by.course.task2.entity;
+package by.course.task2.enums;
 
-public enum LanguageOfDevelopmentType {
+public enum DevLanguageEnum {
     JAVA("Java"),
     JAVASCRIPT("Javascript"),
     PYTHON("Python");
@@ -8,7 +8,7 @@ public enum LanguageOfDevelopmentType {
 
     public final String languageOfDevelopment;
 
-    LanguageOfDevelopmentType(String languageOfDevelopment) {
+    DevLanguageEnum(String languageOfDevelopment) {
         this.languageOfDevelopment = languageOfDevelopment;
     }
 

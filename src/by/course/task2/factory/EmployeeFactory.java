@@ -1,16 +1,19 @@
 package by.course.task2.factory;
 
 import by.course.task2.entity.*;
-import by.course.task2.parser.StringParser;
+import by.course.task2.parser.EmployeeInfoParser;
 
 public class EmployeeFactory {
 
-    public static Employees createEmployee(String temp) {
-        StringParser stringParser = new StringParser(temp);
-        switch (stringParser.getPositionField()) {
+    public Employee createEmployee(String temp) {
+        EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
+        Employee employee = null;
+        switch (employeeInfoParser.getEmployeePosition()) {
             case "BusinessAnalyst": {
-                return new BusinessAnalyst();
-                            }
+                employee = new BusinessAnalyst();
+                employee.setName(employeeInfoParser.getEmployeeName());
+                return employee;
+            }
             case "Developer": {
                 return new Developer();
             }
@@ -22,5 +25,11 @@ public class EmployeeFactory {
             }
         }
         return null;
+    }
+
+    private void setFieldsOfEmployee(Employee employee, EmployeeInfoParser employeeInfoParser) {
+        employee.setName(employeeInfoParser.getEmployeeName());
+        employee.setSurname(employeeInfoParser.getEmployeeSurname());
+        employee.setSalary(Double.parseDouble(employeeInfoParser.getEmployeeSalary()));
     }
 }

@@ -1,13 +1,29 @@
 package by.course.task2.entity;
 
-public class BusinessAnalyst extends InformationTechnologySpecialists {
-    private String levelOfEnglish;
+import by.course.task2.enums.BAEnglishLevelEnum;
+import by.course.task2.enums.EmployeePositionEnum;
+import by.course.task2.enums.ITSpecialistRankEnum;
 
-    public String getLevelOfEnglish() {
+public class BusinessAnalyst extends InformationTechnologySpecialist {
+    private EmployeePositionEnum employeePositionEnum = EmployeePositionEnum.BA;
+    private BAEnglishLevelEnum levelOfEnglish;
+
+    public BusinessAnalyst(){}
+
+    public BusinessAnalyst(ITSpecialistRankEnum rank, double normalHours, BAEnglishLevelEnum levelOfEnglish) {
+        super(rank, normalHours);
+        this.levelOfEnglish = levelOfEnglish;
+    }
+
+    public BAEnglishLevelEnum getLevelOfEnglish() {
         return levelOfEnglish;
     }
 
-    public void setLevelOfEnglish(String levelOfEnglish){
+    public EmployeePositionEnum getEmployeePositionEnum() {
+        return employeePositionEnum;
+    }
+
+    public void setLevelOfEnglish(BAEnglishLevelEnum levelOfEnglish){
         this.levelOfEnglish = levelOfEnglish;
     }
 }

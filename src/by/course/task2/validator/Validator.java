@@ -1,6 +1,6 @@
 package by.course.task2.validator;
 
-import by.course.task2.parser.StringParser;
+import by.course.task2.parser.EmployeeInfoParser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,18 +11,18 @@ public class Validator {
 
     public static boolean isValidEmployee(String temp) {
 
-        StringParser stringParser = new StringParser(temp);
+        EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
 
-        boolean isValidPosition = isValidRequiredField(POSITION_FIELD_EXPRESSION, stringParser.getPositionField());
-        boolean isValidSurname = isValidRequiredField(SURNAME_FIELD_EXPRESSION, stringParser.getSurnameField());
-        boolean isValidName = isValidRequiredField(NAME_FIELD_EXPRESSION, stringParser.getNameField());
-        boolean isValidSalary = isValidRequiredField(SALARY_FIELD_EXPRESSION, stringParser.getSalaryField());
-        boolean isValidRank = isValidNotRequiredField(RANK_FIELD_EXPRESSION, stringParser.getRankField());
-        boolean isValidNormalHours = isValidNotRequiredField(NORMAL_HOURS_FIELD_EXPRESSION, stringParser.getNormalHoursField());
-        boolean isValidSchedule = isValidNotRequiredField(SCHEDULE_FIELD_EXPRESSION, stringParser.getScheduleField());
-        boolean isValidLevelOfEnglish = isValidNotRequiredField(LEVEL_OF_ENGLISH_FIELD_EXPRESSION, stringParser.getLevelOfEnglishField());
-        boolean isValidLanguageOfDevelopment = isValidNotRequiredField(LANGUAGE_OF_DEVELOPMENT_FIELD_EXPRESSION, stringParser.getLanguageOfDevelopmentField());
-        boolean isValidKnowledgeOfAutomation = isValidNotRequiredField(KNOWLEDGE_OF_AUTOMATION_FIELD_EXPRESSION, stringParser.getKnowledgeOfAutomationField());
+        boolean isValidPosition = isValidRequiredField(POSITION_FIELD_EXPRESSION, employeeInfoParser.getEmployeePosition());
+        boolean isValidSurname = isValidRequiredField(SURNAME_FIELD_EXPRESSION, employeeInfoParser.getEmployeeSurname());
+        boolean isValidName = isValidRequiredField(NAME_FIELD_EXPRESSION, employeeInfoParser.getEmployeeName());
+        boolean isValidSalary = isValidRequiredField(SALARY_FIELD_EXPRESSION, employeeInfoParser.getEmployeeSalary());
+        boolean isValidRank = isValidNotRequiredField(RANK_FIELD_EXPRESSION, employeeInfoParser.getITSpecialistRank());
+        boolean isValidNormalHours = isValidNotRequiredField(NORMAL_HOURS_FIELD_EXPRESSION, employeeInfoParser.getITSpecialistNormalHours());
+        boolean isValidSchedule = isValidNotRequiredField(SCHEDULE_FIELD_EXPRESSION, employeeInfoParser.getJanitorSchedule());
+        boolean isValidLevelOfEnglish = isValidNotRequiredField(LEVEL_OF_ENGLISH_FIELD_EXPRESSION, employeeInfoParser.getBALevelOfEnglish());
+        boolean isValidLanguageOfDevelopment = isValidNotRequiredField(LANGUAGE_OF_DEVELOPMENT_FIELD_EXPRESSION, employeeInfoParser.getDevLanguageOfDevelopment());
+        boolean isValidKnowledgeOfAutomation = isValidNotRequiredField(KNOWLEDGE_OF_AUTOMATION_FIELD_EXPRESSION, employeeInfoParser.getTesterKnowledgeOfAutomation());
 
         return isValidPosition && isValidSurname && isValidName && isValidSalary && isValidRank
                 && isValidNormalHours && isValidSchedule && isValidLevelOfEnglish && isValidLanguageOfDevelopment
@@ -71,7 +71,7 @@ public class Validator {
 
     private boolean isValidPosition(String temp) {
         String position = fieldsReader.positionReader(temp);
-        for (PositionType positionType : PositionType.values()) {
+        for (EmployeePositionEnum positionType : EmployeePositionEnum.values()) {
             if (positionType.position.equals(position)) {
                 return true;
             }

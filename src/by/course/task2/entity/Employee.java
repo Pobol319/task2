@@ -1,6 +1,6 @@
 package by.course.task2.entity;
 
-public abstract class Employees {
+public abstract class Employee {
     private String name;
     private String surname;
     private double salary;

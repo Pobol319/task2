@@ -1,6 +1,6 @@
-package by.course.task2.entity;
+package by.course.task2.enums;
 
-public enum LevelOfEnglishType {
+public enum BAEnglishLevelEnum {
     B1("B1"),
     B2("B2"),
     C1("C1"),
@@ -8,7 +8,7 @@ public enum LevelOfEnglishType {
 
     public final String LevelOfEnglish;
 
-    LevelOfEnglishType(String levelOfEnglish) {
+    BAEnglishLevelEnum(String levelOfEnglish) {
         this.LevelOfEnglish = levelOfEnglish;
     }
 }

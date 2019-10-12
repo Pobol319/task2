@@ -2,7 +2,7 @@ package by.course.task2.parser;
 
 import static by.course.task2.constants.RegularExpressions.SPLIT_EXPRESSION;
 
-public class StringParser {
+public class EmployeeInfoParser {
     private String position;
     private String surname;
     private String name;
@@ -14,7 +14,7 @@ public class StringParser {
     private String languageOfDevelopment;
     private String knowledgeOfAutomation;
 
-    public StringParser(String temp) {
+    public EmployeeInfoParser(String temp) {
         String[] fieldsOfEmployee = temp.split(SPLIT_EXPRESSION);
 
         this.position = fieldsOfEmployee[0];
@@ -29,44 +29,32 @@ public class StringParser {
         this.knowledgeOfAutomation = fieldsOfEmployee[9];
     }
 
-    public String getPositionField() {
-        return position;
-    }
+    public String getEmployeePosition() { return position; }
 
-    public String getSurnameField() {
-        return surname;
-    }
+    public String getEmployeeSurname() { return surname; }
 
-    public String getNameField() {
+    public String getEmployeeName() {
         return name;
     }
 
-    public String getSalaryField() {
-        return salary;
-    }
+    public String getEmployeeSalary() { return salary; }
 
-    public String getRankField() {
-        return rank;
-    }
+    public String getITSpecialistRank() { return rank; }
 
-    public String getNormalHoursField() {
+    public String getITSpecialistNormalHours() {
         return normalHours;
     }
 
-    public String getScheduleField() {
+    public String getJanitorSchedule() {
         return schedule;
     }
 
-    public String getLevelOfEnglishField() {
+    public String getBALevelOfEnglish() {
         return levelOfEnglish;
     }
 
-    public String getLanguageOfDevelopmentField() {
-        return languageOfDevelopment;
-    }
+    public String getDevLanguageOfDevelopment() { return languageOfDevelopment; }
 
-    public String getKnowledgeOfAutomationField() {
-        return knowledgeOfAutomation;
-    }
+    public String getTesterKnowledgeOfAutomation() { return knowledgeOfAutomation; }
 
 }

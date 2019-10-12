@@ -31,8 +31,7 @@ IT-фирма. Определить иерархию сотрудников. С�
 */
 
 
-
-import by.course.task2.entity.Employees;
+import by.course.task2.entity.Employee;
 import by.course.task2.factory.EmployeeFactory;
 import by.course.task2.extractor.EmployeesFromFile;
 
@@ -44,10 +43,7 @@ public class Main {
     public static void main(String[] args) {
 
         EmployeesFromFile employeesFromFile = new EmployeesFromFile();
-        List<String> employees = employeesFromFile.getEmployeesFromText(FILE_PATH);
-
-        EmployeeFactory employeeFactory = new EmployeeFactory();
-        
+        List<String> employeeTxt = employeesFromFile.getEmployeesFromText(FILE_PATH);
 
 
 

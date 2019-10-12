@@ -1,6 +1,6 @@
-package by.course.task2.entity;
+package by.course.task2.enums;
 
-public enum PositionType {
+public enum EmployeePositionEnum {
     BA("BusinessAnalyst"),
     DEV("Developer"),
     TESTER("Tester"),
@@ -8,13 +8,13 @@ public enum PositionType {
 
     public final String position;
 
-    PositionType(String position) {
+    EmployeePositionEnum(String position) {
         this.position = position;
     }
 
     public static boolean correctPosition(String position) {
-        for (PositionType positionType : values()) {
-            if (positionType.equals(position)) {
+        for (EmployeePositionEnum employeePositionEnum : values()) {
+            if (employeePositionEnum.equals(position)) {
                 return true;
             }
         }

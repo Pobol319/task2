@@ -1,13 +1,13 @@
-package by.course.task2.entity;
+package by.course.task2.enums;
 
-public enum RankType {
+public enum ITSpecialistRankEnum {
     JUNIOR("Junior"),
     MIDDLE("Middle"),
     SENIOR("Senior");
 
     public final String rank;
 
-    RankType(String rank) {
+    ITSpecialistRankEnum(String rank) {
         this.rank = rank;
     }
 }

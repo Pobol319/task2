@@ -1,12 +1,12 @@
-package by.course.task2.entity;
+package by.course.task2.enums;
 
-public enum KnowledgeOfAutomationType {
+public enum TesterAutomationKnowledgeEnum {
     YES("Yes"),
     NO("No");
 
     private final String knowledgeOfAutomation;
 
-    KnowledgeOfAutomationType(String knowledgeOfAutomation) {
+    TesterAutomationKnowledgeEnum(String knowledgeOfAutomation) {
         this.knowledgeOfAutomation = knowledgeOfAutomation;
     }
 }
