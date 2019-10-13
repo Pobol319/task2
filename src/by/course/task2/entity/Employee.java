@@ -13,9 +13,7 @@ public abstract class Employee {
         return surname;
     }
 
-    public double getSalary() {
-        return salary;
-    }
+    public double getSalary() { return salary; }
 
     public void setName(String name) {
         this.name = name;

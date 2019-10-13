@@ -16,7 +16,6 @@ public class EmployeeInfoParser {
 
     public EmployeeInfoParser(String temp) {
         String[] fieldsOfEmployee = temp.split(SPLIT_EXPRESSION);
-
         this.position = fieldsOfEmployee[0];
         this.surname = fieldsOfEmployee[1];
         this.name = fieldsOfEmployee[2];

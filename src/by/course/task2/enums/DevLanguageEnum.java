@@ -5,7 +5,6 @@ public enum DevLanguageEnum {
     JAVASCRIPT("Javascript"),
     PYTHON("Python");
 
-
     private String languageOfDevelopment;
 
     DevLanguageEnum(String languageOfDevelopment) {

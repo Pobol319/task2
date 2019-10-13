@@ -6,7 +6,7 @@ public enum BAEnglishLevelEnum {
     C1("C1"),
     C2("C2");
 
-    public final String LevelOfEnglish;
+    private  String LevelOfEnglish;
 
     BAEnglishLevelEnum(String levelOfEnglish) {
         this.LevelOfEnglish = levelOfEnglish;

@@ -1,7 +1,6 @@
 package by.course.task2.constants;
 
 public class RegularExpressions {
-
     public static final String SPLIT_EXPRESSION = ",";
     public static final String POSITION_FIELD_EXPRESSION = "\\w*";
     public static final String SURNAME_FIELD_EXPRESSION = "\\w*";
