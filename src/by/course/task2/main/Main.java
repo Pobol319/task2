@@ -27,7 +27,6 @@ IT-фирма. Определить иерархию сотрудников. С�
 Провести сортировку сотрудников на основе одного и нескольких параметров. Найти сотрудника,
 соответствующего заданному диапазону зарплат.
 
-
 */
 
 
@@ -37,8 +36,11 @@ import by.course.task2.entity.InformationTechnologySpecialist;
 import by.course.task2.enums.ITSpecialistRankEnum;
 import by.course.task2.factory.EmployeeFactory;
 import by.course.task2.extractor.EmployeesFromFile;
+import by.course.task2.util.EmployeeUtil;
 
 import java.util.List;
+
+import static by.course.task2.constants.EmployeeConstantsPool.*;
 
 public class Main {
     private static final String FILE_PATH = "resources\\employees.txt";
@@ -52,17 +54,16 @@ public class Main {
         ITSpecialistRankEnum.valueOf(rank);
 
         EmployeeFactory employeeFactory = new EmployeeFactory();
-        List<Employee> listOfEmployee = employeeFactory.getListOfEmployee(listOfEmployeeTxt);
+        List<Employee> listOfEmployees = employeeFactory.getListOfEmployee(listOfEmployeeTxt);
 
-        for (Employee employee : listOfEmployee) {
-            /*System.out.println(employee.getName());
-            System.out.println(employee.getSurname());
-            System.out.println(employee.getSalary());
-            System.out.println(((InformationTechnologySpecialist)employee).getNormalHours());
-            System.out.println(((InformationTechnologySpecialist)employee).getRank());
-            System.out.println(((BusinessAnalyst)employee).getLevelOfEnglish());*/
-            System.out.println(employee.toString());
-        }
+        /*Все сотрудники в компании*/
+        System.out.println("Все сотрудники:");
+        EmployeeUtil.printEmployees(listOfEmployees);
+
+        /*Сотрудникик в заданном диапазоне зарплат*/
+        List<Employee> listOfEmployeesSalaryRange = EmployeeUtil.salaryRange(listOfEmployees, MIN_SALARY, MAX_SALARY);
+        System.out.println("Сотрудники в диапазоне зарплат");
+        EmployeeUtil.printEmployees(listOfEmployeesSalaryRange);
 
 
     }

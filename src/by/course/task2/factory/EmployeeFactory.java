@@ -11,7 +11,7 @@ public class EmployeeFactory {
 
     public List<Employee> getListOfEmployee(List<String> listOfEmployeeTxt) {
         List<Employee> listOfEmployee = new ArrayList<>();
-        Employee employee = null;
+        Employee employee;
         for (String employeeString : listOfEmployeeTxt) {
             employee = createEmployee(employeeString);
             listOfEmployee.add(employee);
@@ -21,7 +21,7 @@ public class EmployeeFactory {
 
     private Employee createEmployee(String temp) {
         EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
-        Employee employee = null;
+        Employee employee;
         switch (employeeInfoParser.getEmployeePosition()) {
             case "BusinessAnalyst": {
                 employee = new BusinessAnalyst();
@@ -31,24 +31,24 @@ public class EmployeeFactory {
                 return employee;
             }
             case "Developer": {
-                employee = new BusinessAnalyst();
+                employee = new Developer();
                 setEmployeeFields(employee, employeeInfoParser);
                 setITSpecialistFields(employee, employeeInfoParser);
                 setDevFields(employee, employeeInfoParser);
-                return new Developer();
+                return employee;
             }
             case "Tester": {
-                employee = new BusinessAnalyst();
+                employee = new Tester();
                 setEmployeeFields(employee, employeeInfoParser);
                 setITSpecialistFields(employee, employeeInfoParser);
                 setTesterFields(employee, employeeInfoParser);
-                return new Tester();
+                return employee;
             }
             case "Janitor": {
-                employee = new BusinessAnalyst();
+                employee = new Janitor();
                 setEmployeeFields(employee, employeeInfoParser);
                 setJanitorFields(employee, employeeInfoParser);
-                return new Janitor();
+                return employee;
             }
         }
         return null;

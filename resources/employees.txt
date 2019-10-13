@@ -1,2 +1,11 @@
 BusinessAnalyst,Pobol,Pavel,450,Junior,10, ,B1, , ,
 BusinessAnalyst,Vasin,Vadim,500,Junior,12, ,B2, , ,
+
+Developer,Petrov,Gena,1000,Middle,22, , ,Java, ,
+Developer,Kotov,Petr,2000,Senior,40, , ,Javascript, ,
+Developer,Pupkin,Ivan,550,Junior,15, , ,Python, ,
+
+Tester,Shnip,Valera,300,Junior,10, , , ,No,
+Tester,Ivanova,Vera,1000,Senior,35, , , ,Yes,
+
+Janitor,Petrova,Anna,400, , ,Full-time, , , ,

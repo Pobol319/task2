@@ -2,10 +2,6 @@ package by.course.task2.constants;
 
 public class RegularExpressions {
 
-    /*public static final String POSITION_EXPRESSION = "\\s*\\w*Position =\\s*(\\w+)\\s*;";
-    public static final String NAME_EXPRESSION = "\\s*\\w*Name =\\s*(\\w+)\\s*;";
-    public static final String RANK_EXPRESSION = "\\s*\\w*Rank =\\s*(\\w+)\\s*;";*/
-
     public static final String SPLIT_EXPRESSION = ",";
     public static final String POSITION_FIELD_EXPRESSION = "\\w*";
     public static final String SURNAME_FIELD_EXPRESSION = "\\w*";
@@ -18,5 +14,6 @@ public class RegularExpressions {
     public static final String LANGUAGE_OF_DEVELOPMENT_FIELD_EXPRESSION = "\\w*";
     public static final String KNOWLEDGE_OF_AUTOMATION_FIELD_EXPRESSION = "\\w*";
 
+    private RegularExpressions(){}
 
 }

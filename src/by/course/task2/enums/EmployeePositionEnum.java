@@ -6,10 +6,7 @@ public enum EmployeePositionEnum {
     TESTER("Tester"),
     JANITOR("Janitor");
 
-    public final String position;
-
     EmployeePositionEnum(String position) {
-        this.position = position;
     }
 
     /*public static boolean correctPosition(String position) {

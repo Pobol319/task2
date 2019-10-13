@@ -11,6 +11,10 @@ public class Validator {
 
     public static boolean isValidEmployee(String temp) {
 
+        if (temp.isEmpty()) {
+            return false;
+        }
+
         EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
 
         boolean isValidPosition = isValidRequiredField(POSITION_FIELD_EXPRESSION, employeeInfoParser.getEmployeePosition());
