@@ -30,10 +30,9 @@ IT-фирма. Определить иерархию сотрудников. С�
 */
 
 
-import by.course.task2.entity.BusinessAnalyst;
+import by.course.task2.comparator.EmployeeNormalHoursComparator;
+import by.course.task2.comparator.EmployeeSalaryComparator;
 import by.course.task2.entity.Employee;
-import by.course.task2.entity.InformationTechnologySpecialist;
-import by.course.task2.enums.ITSpecialistRankEnum;
 import by.course.task2.factory.EmployeeFactory;
 import by.course.task2.extractor.EmployeesFromFile;
 import by.course.task2.util.EmployeeUtil;
@@ -43,16 +42,13 @@ import java.util.List;
 import static by.course.task2.constants.EmployeeConstantsPool.*;
 
 public class Main {
-    private static final String FILE_PATH = "resources\\employees.txt";
+    private static final String ALL_EMPLOYEES_PATH = "resources\\employees.txt";
+    private static final String DEVELOPER_TEAM_PATH = "resources\\developer_team.txt";
 
     public static void main(String[] args) {
 
         EmployeesFromFile employeesFromFile = new EmployeesFromFile();
-        List<String> listOfEmployeeTxt = employeesFromFile.getEmployeesFromText(FILE_PATH);
-
-        String rank = "JUNIOR";
-        ITSpecialistRankEnum.valueOf(rank);
-
+        List<String> listOfEmployeeTxt = employeesFromFile.getEmployeesFromText(ALL_EMPLOYEES_PATH);
         EmployeeFactory employeeFactory = new EmployeeFactory();
         List<Employee> listOfEmployees = employeeFactory.getListOfEmployee(listOfEmployeeTxt);
 
@@ -62,9 +58,24 @@ public class Main {
 
         /*Сотрудникик в заданном диапазоне зарплат*/
         List<Employee> listOfEmployeesSalaryRange = EmployeeUtil.salaryRange(listOfEmployees, MIN_SALARY, MAX_SALARY);
-        System.out.println("Сотрудники в диапазоне зарплат");
+        System.out.println("Сотрудники в диапазоне зарплат от " + MIN_SALARY + " до " + MAX_SALARY);
         EmployeeUtil.printEmployees(listOfEmployeesSalaryRange);
 
+        /*Создание команды разработчиков*/
+        EmployeesFromFile developerFromFile = new EmployeesFromFile();
+        List<String> listOfDevelopersTxt = developerFromFile.getEmployeesFromText(DEVELOPER_TEAM_PATH);
+        List<Employee> listOfDevelopers = employeeFactory.getListOfEmployee(listOfDevelopersTxt);
 
+        /*Команда разработчиков*/
+        System.out.println("Команда разработчиков:");
+        EmployeeUtil.printEmployees(listOfDevelopers);
+        System.out.println("Стоимость команды: " + EmployeeUtil.sumOfNormalHours(listOfDevelopers) + " н/ч в USD");
+
+        /* Сортировка команды разработчиков */
+        EmployeeSalaryComparator compareSalary = new EmployeeSalaryComparator();
+        EmployeeNormalHoursComparator compareNormalHours = new EmployeeNormalHoursComparator();
+        System.out.println("Отсартированная команда разработчиков:");
+        listOfDevelopers.sort(compareNormalHours.thenComparing(compareSalary));
+        EmployeeUtil.printEmployees(listOfDevelopers);
     }
 }

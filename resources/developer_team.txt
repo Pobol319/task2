@@ -1,0 +1,5 @@
+Developer,Petrov,Gena,1200.99,Middle,26, , ,Java, ,
+Developer,Kotov,Petr,1800,Senior,40, , ,Java, ,
+Developer,Pupkin,Ivan,550,Junior,12, , ,Java, ,
+Developer,Vasin,Pavel,450,Junior,12, , ,Java, ,
+Developer,Rebrov,Denis,1500.01,Middle,26, , ,Java, ,
