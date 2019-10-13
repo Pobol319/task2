@@ -8,7 +8,8 @@ public class Developer extends InformationTechnologySpecialist {
     private EmployeePositionEnum employeePositionEnum = EmployeePositionEnum.DEV;
     private DevLanguageEnum languageOfDevelopment;
 
-    public Developer(){}
+    public Developer() {
+    }
 
     public Developer(ITSpecialistRankEnum rank, double normalHours, DevLanguageEnum languageOfDevelopment) {
         super(rank, normalHours);
@@ -25,5 +26,10 @@ public class Developer extends InformationTechnologySpecialist {
 
     public void setLanguageOfDevelopment(DevLanguageEnum languageOfDevelopment) {
         this.languageOfDevelopment = languageOfDevelopment;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Position: " + employeePositionEnum + ", Language of development: " + languageOfDevelopment;
     }
 }

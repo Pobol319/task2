@@ -28,4 +28,8 @@ public abstract class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+    public String toString() {
+        return "Surname: " + surname + ", Name: " + name + ", Salary: " + salary + ", ";
+    }
 }

@@ -12,13 +12,13 @@ public enum EmployeePositionEnum {
         this.position = position;
     }
 
-    public static boolean correctPosition(String position) {
+    /*public static boolean correctPosition(String position) {
         for (EmployeePositionEnum employeePositionEnum : values()) {
             if (employeePositionEnum.equals(position)) {
                 return true;
             }
         }
         return false;
-    }
+    }*/
 
 }

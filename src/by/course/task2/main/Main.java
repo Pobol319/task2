@@ -33,6 +33,8 @@ IT-фирма. Определить иерархию сотрудников. С�
 
 import by.course.task2.entity.BusinessAnalyst;
 import by.course.task2.entity.Employee;
+import by.course.task2.entity.InformationTechnologySpecialist;
+import by.course.task2.enums.ITSpecialistRankEnum;
 import by.course.task2.factory.EmployeeFactory;
 import by.course.task2.extractor.EmployeesFromFile;
 
@@ -44,12 +46,23 @@ public class Main {
     public static void main(String[] args) {
 
         EmployeesFromFile employeesFromFile = new EmployeesFromFile();
-        List<String> employeeTxt = employeesFromFile.getEmployeesFromText(FILE_PATH);
+        List<String> listOfEmployeeTxt = employeesFromFile.getEmployeesFromText(FILE_PATH);
 
+        String rank = "JUNIOR";
+        ITSpecialistRankEnum.valueOf(rank);
 
+        EmployeeFactory employeeFactory = new EmployeeFactory();
+        List<Employee> listOfEmployee = employeeFactory.getListOfEmployee(listOfEmployeeTxt);
 
-
-
+        for (Employee employee : listOfEmployee) {
+            /*System.out.println(employee.getName());
+            System.out.println(employee.getSurname());
+            System.out.println(employee.getSalary());
+            System.out.println(((InformationTechnologySpecialist)employee).getNormalHours());
+            System.out.println(((InformationTechnologySpecialist)employee).getRank());
+            System.out.println(((BusinessAnalyst)employee).getLevelOfEnglish());*/
+            System.out.println(employee.toString());
+        }
 
 
     }

@@ -6,7 +6,8 @@ public abstract class InformationTechnologySpecialist extends Employee {
     private ITSpecialistRankEnum rank;
     private double normalHours;
 
-    public InformationTechnologySpecialist(){}
+    public InformationTechnologySpecialist() {
+    }
 
     public InformationTechnologySpecialist(ITSpecialistRankEnum rank, double normalHours) {
         this.rank = rank;
@@ -27,5 +28,9 @@ public abstract class InformationTechnologySpecialist extends Employee {
 
     public void setNormalHours(double normalHours) {
         this.normalHours = normalHours;
+    }
+
+    public String toString() {
+        return super.toString() + "Rank: " + rank + ", Normal Hours: " + normalHours + ", ";
     }
 }
