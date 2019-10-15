@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 import static by.course.task2.constants.RegularExpressions.*;
 
 public class Validator {
-
     public static boolean isValidEmployee(String temp) {
 
         if (temp.isEmpty()) {
@@ -17,16 +16,16 @@ public class Validator {
 
         EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
 
-        boolean isValidPosition = isValidRequiredField(POSITION_FIELD_EXPRESSION, employeeInfoParser.getEmployeePosition());
-        boolean isValidSurname = isValidRequiredField(SURNAME_FIELD_EXPRESSION, employeeInfoParser.getEmployeeSurname());
-        boolean isValidName = isValidRequiredField(NAME_FIELD_EXPRESSION, employeeInfoParser.getEmployeeName());
-        boolean isValidSalary = isValidRequiredField(SALARY_FIELD_EXPRESSION, employeeInfoParser.getEmployeeSalary());
-        boolean isValidRank = isValidNotRequiredField(RANK_FIELD_EXPRESSION, employeeInfoParser.getITSpecialistRank());
-        boolean isValidNormalHours = isValidNotRequiredField(NORMAL_HOURS_FIELD_EXPRESSION, employeeInfoParser.getITSpecialistNormalHours());
-        boolean isValidSchedule = isValidNotRequiredField(SCHEDULE_FIELD_EXPRESSION, employeeInfoParser.getJanitorSchedule());
+        boolean isValidPosition = isValidRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getEmployeePosition());
+        boolean isValidSurname = isValidRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getEmployeeSurname());
+        boolean isValidName = isValidRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getEmployeeName());
+        boolean isValidSalary = isValidRequiredField(DOUBLE_NUMBER_FIELD_EXPRESSION, employeeInfoParser.getEmployeeSalary());
+        boolean isValidRank = isValidNotRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getITSpecialistRank());
+        boolean isValidNormalHours = isValidNotRequiredField(DOUBLE_NUMBER_FIELD_EXPRESSION, employeeInfoParser.getITSpecialistNormalHours());
+        boolean isValidSchedule = isValidNotRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getJanitorSchedule());
         boolean isValidLevelOfEnglish = isValidNotRequiredField(LEVEL_OF_ENGLISH_FIELD_EXPRESSION, employeeInfoParser.getBALevelOfEnglish());
-        boolean isValidLanguageOfDevelopment = isValidNotRequiredField(LANGUAGE_OF_DEVELOPMENT_FIELD_EXPRESSION, employeeInfoParser.getDevLanguageOfDevelopment());
-        boolean isValidKnowledgeOfAutomation = isValidNotRequiredField(KNOWLEDGE_OF_AUTOMATION_FIELD_EXPRESSION, employeeInfoParser.getTesterKnowledgeOfAutomation());
+        boolean isValidLanguageOfDevelopment = isValidNotRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getDevLanguageOfDevelopment());
+        boolean isValidKnowledgeOfAutomation = isValidNotRequiredField(WORD_FIELD_EXPRESSION, employeeInfoParser.getTesterKnowledgeOfAutomation());
 
         return isValidPosition && isValidSurname && isValidName && isValidSalary && isValidRank
                 && isValidNormalHours && isValidSchedule && isValidLevelOfEnglish && isValidLanguageOfDevelopment

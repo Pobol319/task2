@@ -1,9 +1,5 @@
 package by.course.task2.entity;
 
-import by.course.task2.enums.DevLanguageEnum;
-import by.course.task2.enums.EmployeePositionEnum;
-import by.course.task2.enums.ITSpecialistRankEnum;
-
 public class Developer extends InformationTechnologySpecialist {
     private EmployeePositionEnum employeePositionEnum = EmployeePositionEnum.DEV;
     private DevLanguageEnum languageOfDevelopment;

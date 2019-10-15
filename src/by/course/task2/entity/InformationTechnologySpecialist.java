@@ -1,7 +1,5 @@
 package by.course.task2.entity;
 
-import by.course.task2.enums.ITSpecialistRankEnum;
-
 public abstract class InformationTechnologySpecialist extends Employee {
     private ITSpecialistRankEnum rank;
     private double normalHours;

@@ -1,6 +1,8 @@
-package by.course.task2.extractor;
+package by.course.task2.reader;
 
 
+
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,7 +13,8 @@ import java.util.List;
 
 import static by.course.task2.validator.Validator.isValidEmployee;
 
-public class EmployeesFromFile {
+public class TxtReader {
+    private static final Logger log = Logger.getLogger(TxtReader.class);
 
     private List<String> getTextFromFile(String path) {
         File file = new File(path);
@@ -22,7 +25,7 @@ public class EmployeesFromFile {
                 textFromFile.add(temp);
             }
         } catch (IOException e2) {
-            System.out.println();
+            log.error("Error receiving text");
         }
         return textFromFile;
     }
@@ -35,6 +38,7 @@ public class EmployeesFromFile {
                 listOfEmployees.add(temp);
             }
         }
+        log.info("Validation of text from file is completed");
         return listOfEmployees;
     }
 

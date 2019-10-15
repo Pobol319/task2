@@ -34,7 +34,7 @@ import by.course.task2.comparator.EmployeeNormalHoursComparator;
 import by.course.task2.comparator.EmployeeSalaryComparator;
 import by.course.task2.entity.Employee;
 import by.course.task2.factory.EmployeeFactory;
-import by.course.task2.extractor.EmployeesFromFile;
+import by.course.task2.reader.TxtReader;
 import by.course.task2.util.EmployeeUtil;
 
 import java.util.List;
@@ -47,8 +47,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        EmployeesFromFile employeesFromFile = new EmployeesFromFile();
-        List<String> listOfEmployeeTxt = employeesFromFile.getEmployeesFromText(ALL_EMPLOYEES_PATH);
+        TxtReader txtReader = new TxtReader();
+        List<String> listOfEmployeeTxt = txtReader.getEmployeesFromText(ALL_EMPLOYEES_PATH);
         EmployeeFactory employeeFactory = new EmployeeFactory();
         List<Employee> listOfEmployees = employeeFactory.getListOfEmployee(listOfEmployeeTxt);
 
@@ -62,7 +62,7 @@ public class Main {
         EmployeeUtil.printEmployees(listOfEmployeesSalaryRange);
 
         /*Создание команды разработчиков*/
-        EmployeesFromFile developerFromFile = new EmployeesFromFile();
+        TxtReader developerFromFile = new TxtReader();
         List<String> listOfDevelopersTxt = developerFromFile.getEmployeesFromText(DEVELOPER_TEAM_PATH);
         List<Employee> listOfDevelopers = employeeFactory.getListOfEmployee(listOfDevelopersTxt);
 

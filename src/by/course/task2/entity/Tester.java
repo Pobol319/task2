@@ -1,9 +1,5 @@
 package by.course.task2.entity;
 
-import by.course.task2.enums.EmployeePositionEnum;
-import by.course.task2.enums.ITSpecialistRankEnum;
-import by.course.task2.enums.TesterAutomationKnowledgeEnum;
-
 public class Tester extends InformationTechnologySpecialist {
     private EmployeePositionEnum employeePositionEnum = EmployeePositionEnum.TESTER;
     private TesterAutomationKnowledgeEnum knowledgeOfAutomation;

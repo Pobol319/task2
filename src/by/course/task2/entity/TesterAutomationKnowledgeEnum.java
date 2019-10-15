@@ -1,4 +1,4 @@
-package by.course.task2.enums;
+package by.course.task2.entity;
 
 public enum TesterAutomationKnowledgeEnum {
     YES("Yes"),

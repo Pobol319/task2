@@ -15,17 +15,17 @@ public class EmployeeInfoParser {
     private String knowledgeOfAutomation;
 
     public EmployeeInfoParser(String temp) {
-        String[] fieldsOfEmployee = temp.split(SPLIT_EXPRESSION);
-        this.position = fieldsOfEmployee[0];
-        this.surname = fieldsOfEmployee[1];
-        this.name = fieldsOfEmployee[2];
-        this.salary = fieldsOfEmployee[3];
-        this.rank = fieldsOfEmployee[4];
-        this.normalHours = fieldsOfEmployee[5];
-        this.schedule = fieldsOfEmployee[6];
-        this.levelOfEnglish = fieldsOfEmployee[7];
-        this.languageOfDevelopment = fieldsOfEmployee[8];
-        this.knowledgeOfAutomation = fieldsOfEmployee[9];
+            String[] fieldsOfEmployee = temp.split(SPLIT_EXPRESSION);
+            this.position = fieldsOfEmployee[0];
+            this.surname = fieldsOfEmployee[1];
+            this.name = fieldsOfEmployee[2];
+            this.salary = fieldsOfEmployee[3];
+            this.rank = fieldsOfEmployee[4];
+            this.normalHours = fieldsOfEmployee[5];
+            this.schedule = fieldsOfEmployee[6];
+            this.levelOfEnglish = fieldsOfEmployee[7];
+            this.languageOfDevelopment = fieldsOfEmployee[8];
+            this.knowledgeOfAutomation = fieldsOfEmployee[9];
     }
 
     public String getEmployeePosition() { return position; }

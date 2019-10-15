@@ -1,9 +1,5 @@
 package by.course.task2.entity;
 
-import by.course.task2.enums.BAEnglishLevelEnum;
-import by.course.task2.enums.EmployeePositionEnum;
-import by.course.task2.enums.ITSpecialistRankEnum;
-
 public class BusinessAnalyst extends InformationTechnologySpecialist {
     private EmployeePositionEnum employeePositionEnum = EmployeePositionEnum.BA;
     private BAEnglishLevelEnum levelOfEnglish;

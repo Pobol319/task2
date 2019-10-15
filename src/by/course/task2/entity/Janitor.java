@@ -1,8 +1,5 @@
 package by.course.task2.entity;
 
-import by.course.task2.enums.EmployeePositionEnum;
-import by.course.task2.enums.JanitorScheduleEnum;
-
 public class Janitor extends Employee {
     private EmployeePositionEnum employeePositionEnum = EmployeePositionEnum.JANITOR;
     private JanitorScheduleEnum schedule;
