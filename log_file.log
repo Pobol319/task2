@@ -75,3 +75,46 @@
 2019-10-16 01:08:25 INFO  EmployeeFactory:63 - Set Employee fields
 2019-10-16 01:08:25 INFO  EmployeeFactory:69 - Set IT specialist fields
 2019-10-16 01:08:25 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  TxtReader:41 - Validation of text from file is completed
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:79 - Set Ba fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:79 - Set Ba fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:89 - Set Tester fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:89 - Set Tester fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:74 - Set Janitor fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:55 - Null employee was created
+2019-10-16 01:33:05 ERROR EmployeeUtil:47 - Error in printEmployees
+2019-10-16 01:33:05 ERROR EmployeeUtil:35 - Error in salaryRange
+2019-10-16 01:33:05 INFO  TxtReader:41 - Validation of text from file is completed
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:63 - Set Employee fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:69 - Set IT specialist fields
+2019-10-16 01:33:05 INFO  EmployeeFactory:84 - Set Developer fields

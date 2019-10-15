@@ -11,16 +11,4 @@ public enum DevLanguageEnum {
         this.languageOfDevelopment = languageOfDevelopment;
     }
 
-    public static DevLanguageEnum getDevLanguageEnum(String languageOfDevelopment) {
-        if (DevLanguageEnum.JAVA.languageOfDevelopment.equals(languageOfDevelopment)) {
-            return DevLanguageEnum.JAVA;
-        } else if (DevLanguageEnum.JAVASCRIPT.languageOfDevelopment.equals(languageOfDevelopment)) {
-            return DevLanguageEnum.JAVASCRIPT;
-        } else if (DevLanguageEnum.PYTHON.languageOfDevelopment.equals(languageOfDevelopment)) {
-            return DevLanguageEnum.PYTHON;
-        } else {
-            return null;
-        }
-    }
-
 }

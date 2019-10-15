@@ -64,13 +64,13 @@ public class EmployeeFactory {
     }
 
     private void setITSpecialistFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
-        ((InformationTechnologySpecialist) employee).setRank(ITSpecialistRankEnum.getITSpecialistRankEnum(employeeInfoParser.getITSpecialistRank()));
+        ((InformationTechnologySpecialist) employee).setRank(ITSpecialistRankEnum.valueOf(employeeInfoParser.getITSpecialistRank().toUpperCase()));
         ((InformationTechnologySpecialist) employee).setNormalHours(Double.parseDouble(employeeInfoParser.getITSpecialistNormalHours()));
         log.info("Set IT specialist fields");
     }
 
     private void setJanitorFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
-        ((Janitor) employee).setSchedule(JanitorScheduleEnum.getJanitorScheduleEnum(employeeInfoParser.getJanitorSchedule()));
+        ((Janitor) employee).setSchedule(JanitorScheduleEnum.valueOf(employeeInfoParser.getJanitorSchedule().toUpperCase()));
         log.info("Set Janitor fields");
     }
 
@@ -80,12 +80,12 @@ public class EmployeeFactory {
     }
 
     private void setDevFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
-        ((Developer) employee).setLanguageOfDevelopment(DevLanguageEnum.getDevLanguageEnum(employeeInfoParser.getDevLanguageOfDevelopment()));
+        ((Developer) employee).setLanguageOfDevelopment(DevLanguageEnum.valueOf(employeeInfoParser.getDevLanguageOfDevelopment().toUpperCase()));
         log.info("Set Developer fields");
     }
 
     private void setTesterFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
-        ((Tester) employee).setKnowledgeOfAutomation(TesterAutomationKnowledgeEnum.getTesterAutomationKnowledgeEnum(employeeInfoParser.getTesterKnowledgeOfAutomation()));
+        ((Tester) employee).setKnowledgeOfAutomation(TesterAutomationKnowledgeEnum.valueOf(employeeInfoParser.getTesterKnowledgeOfAutomation().toUpperCase()));
         log.info("Set Tester fields");
     }
 }

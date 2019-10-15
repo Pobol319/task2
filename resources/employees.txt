@@ -8,7 +8,7 @@ Developer,Pupkin,Ivan,550,Junior,15, , ,Python, ,
 Tester,Shnip,Valera,300,Junior,10, , , ,No,
 Tester,Ivanova,Vera,1000,Senior,35, , , ,Yes,
 
-Janitor,Petrova,Anna,400, , ,Full-time, , , ,
+Janitor,Petrova,Anna,400, , ,Full_time, , , ,
 
 Tes,Ivanova,Vera,1000,Senior,35, , , ,Yes,
 Tester, ,Vera,1000,Senior,cc, , , ,Yes,
