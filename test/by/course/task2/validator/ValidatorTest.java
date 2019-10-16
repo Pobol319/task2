@@ -14,7 +14,7 @@ public class ValidatorTest {
 
     @Test
     public void isValidEmployeeNegativeTest() {
-        String temp = "BusinessAnalyst,Pobol,Pavel,pap,Junior,10, ,A1, , ,";
+        String temp = "BusinessAnalyst,Pobol,Pavel,###,Junior,10, ,A1, , ,";
         Assert.assertFalse(Validator.isValidEmployee(temp));
     }
 }
