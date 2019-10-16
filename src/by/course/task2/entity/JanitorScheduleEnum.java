@@ -9,5 +9,4 @@ public enum JanitorScheduleEnum {
     JanitorScheduleEnum(String schedule) {
         this.schedule = schedule;
     }
-
 }

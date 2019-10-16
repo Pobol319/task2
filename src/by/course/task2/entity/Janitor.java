@@ -15,5 +15,4 @@ public class Janitor extends Employee {
     public String toString() {
         return super.toString() + "Position: " + employeePositionEnum + ", Schedule: " + schedule;
     }
-
 }

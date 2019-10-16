@@ -29,13 +29,12 @@ IT-фирма. Определить иерархию сотрудников. С�
 
 */
 
-
 import by.course.task2.comparator.EmployeeNormalHoursComparator;
 import by.course.task2.comparator.EmployeeSalaryComparator;
 import by.course.task2.entity.Employee;
 import by.course.task2.factory.EmployeeFactory;
 import by.course.task2.reader.TxtReader;
-import by.course.task2.util.EmployeeUtil;
+import by.course.task2.actions.EmployeeActions;
 
 import java.util.List;
 
@@ -54,12 +53,12 @@ public class Main {
 
         /*Все сотрудники в компании*/
         System.out.println("Все сотрудники:");
-        EmployeeUtil.printEmployees(listOfEmployees);
+        EmployeeActions.printEmployees(listOfEmployees);
 
         /*Сотрудникик в заданном диапазоне зарплат*/
-        List<Employee> listOfEmployeesSalaryRange = EmployeeUtil.salaryRange(listOfEmployees, MIN_SALARY, MAX_SALARY);
+        List<Employee> listOfEmployeesSalaryRange = EmployeeActions.getEmployeesFromSalaryRange(listOfEmployees, MIN_SALARY, MAX_SALARY);
         System.out.println("Сотрудники в диапазоне зарплат от " + MIN_SALARY + " до " + MAX_SALARY);
-        EmployeeUtil.printEmployees(listOfEmployeesSalaryRange);
+        EmployeeActions.printEmployees(listOfEmployeesSalaryRange);
 
         /*Создание команды разработчиков*/
         TxtReader developerFromFile = new TxtReader();
@@ -68,14 +67,14 @@ public class Main {
 
         /*Команда разработчиков*/
         System.out.println("Команда разработчиков:");
-        EmployeeUtil.printEmployees(listOfDevelopers);
-        System.out.println("Стоимость команды: " + EmployeeUtil.sumOfNormalHours(listOfDevelopers) + " н/ч в USD");
+        EmployeeActions.printEmployees(listOfDevelopers);
+        System.out.println("Стоимость команды: " + EmployeeActions.sumOfNormalHours(listOfDevelopers) + " н/ч в USD");
 
         /* Сортировка команды разработчиков */
         EmployeeSalaryComparator compareSalary = new EmployeeSalaryComparator();
         EmployeeNormalHoursComparator compareNormalHours = new EmployeeNormalHoursComparator();
         System.out.println("Отсартированная команда разработчиков:");
         listOfDevelopers.sort(compareNormalHours.thenComparing(compareSalary));
-        EmployeeUtil.printEmployees(listOfDevelopers);
+        EmployeeActions.printEmployees(listOfDevelopers);
     }
 }

@@ -10,5 +10,4 @@ public enum ITSpecialistRankEnum {
     ITSpecialistRankEnum(String rank) {
         this.rank = rank;
     }
-
 }

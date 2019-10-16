@@ -6,5 +6,4 @@ public class EmployeeConstantsPool {
 
     private EmployeeConstantsPool() {
     }
-
 }

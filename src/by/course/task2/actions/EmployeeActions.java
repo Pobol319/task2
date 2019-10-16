@@ -1,4 +1,4 @@
-package by.course.task2.util;
+package by.course.task2.actions;
 
 import by.course.task2.entity.Employee;
 import by.course.task2.entity.InformationTechnologySpecialist;
@@ -8,25 +8,25 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-public class EmployeeUtil {
-    private static final Logger log = Logger.getLogger(EmployeeUtil.class);
+public class EmployeeActions {
+    private static final Logger log = Logger.getLogger(EmployeeActions.class);
 
-    public static double sumOfNormalHours(List<Employee> listOfDevelopers) {
+    public static double sumOfNormalHours(List<Employee> listOfEmployees) {
         double sumOfNormalHours = 0;
         try {
-            for (Employee employee : listOfDevelopers) {
+            for (Employee employee : listOfEmployees) {
                 sumOfNormalHours += ((InformationTechnologySpecialist) employee).getNormalHours();
             }
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             log.error("Error in sumOfNormalHours");
         }
         return sumOfNormalHours;
     }
 
-    public static List<Employee> salaryRange(List<Employee> allEmployees, double minSalary, double maxSalary) {
+    public static List<Employee> getEmployeesFromSalaryRange(List<Employee> listOfEmployees, double minSalary, double maxSalary) {
         List<Employee> employeesSalaryRange = new ArrayList<>();
         try {
-            for (Employee employee : allEmployees) {
+            for (Employee employee : listOfEmployees) {
                 if (employee.getSalary() >= minSalary && employee.getSalary() <= maxSalary) {
                     employeesSalaryRange.add(employee);
                 }
@@ -37,9 +37,9 @@ public class EmployeeUtil {
         return employeesSalaryRange;
     }
 
-    public static void printEmployees(List<Employee> listOfEmployee) {
+    public static void printEmployees(List<Employee> listOfEmployees) {
         try {
-            for (Employee employee : listOfEmployee) {
+            for (Employee employee : listOfEmployees) {
                 System.out.println(employee.toString());
             }
             System.out.println();

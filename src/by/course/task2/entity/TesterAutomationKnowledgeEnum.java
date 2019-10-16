@@ -9,5 +9,4 @@ public enum TesterAutomationKnowledgeEnum {
     TesterAutomationKnowledgeEnum(String knowledgeOfAutomation) {
         this.knowledgeOfAutomation = knowledgeOfAutomation;
     }
-
 }

@@ -8,5 +8,4 @@ public enum EmployeePositionEnum {
 
     EmployeePositionEnum(String position) {
     }
-
 }
