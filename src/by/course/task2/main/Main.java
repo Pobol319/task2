@@ -32,7 +32,6 @@ IT-фирма. Определить иерархию сотрудников. С�
 import by.course.task2.comparator.EmployeeNormalHoursComparator;
 import by.course.task2.comparator.EmployeeSalaryComparator;
 import by.course.task2.entity.Employee;
-import by.course.task2.factory.EmployeeFactory;
 import by.course.task2.reader.TxtReader;
 import by.course.task2.actions.EmployeeActions;
 
@@ -48,22 +47,21 @@ public class Main {
 
         TxtReader txtReader = new TxtReader();
         List<String> listOfEmployeeTxt = txtReader.getEmployeesFromText(ALL_EMPLOYEES_PATH);
-        EmployeeFactory employeeFactory = new EmployeeFactory();
-        List<Employee> listOfEmployees = employeeFactory.getListOfEmployee(listOfEmployeeTxt);
+        List<Employee> listOfEmployees = EmployeeActions.getListOfEmployee(listOfEmployeeTxt);
 
         /*Все сотрудники в компании*/
         System.out.println("Все сотрудники:");
         EmployeeActions.printEmployees(listOfEmployees);
 
         /*Сотрудникик в заданном диапазоне зарплат*/
-        List<Employee> listOfEmployeesSalaryRange = EmployeeActions.getEmployeesFromSalaryRange(listOfEmployees, MIN_SALARY, MAX_SALARY);
+        List<Employee> listOfEmployeesSalaryRange = EmployeeActions.getEmployeesWithSalaryRange(listOfEmployees, MIN_SALARY, MAX_SALARY);
         System.out.println("Сотрудники в диапазоне зарплат от " + MIN_SALARY + " до " + MAX_SALARY);
         EmployeeActions.printEmployees(listOfEmployeesSalaryRange);
 
         /*Создание команды разработчиков*/
         TxtReader developerFromFile = new TxtReader();
         List<String> listOfDevelopersTxt = developerFromFile.getEmployeesFromText(DEVELOPER_TEAM_PATH);
-        List<Employee> listOfDevelopers = employeeFactory.getListOfEmployee(listOfDevelopersTxt);
+        List<Employee> listOfDevelopers = EmployeeActions.getListOfEmployee(listOfDevelopersTxt);
 
         /*Команда разработчиков*/
         System.out.println("Команда разработчиков:");

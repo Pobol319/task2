@@ -6,6 +6,7 @@ import by.course.task2.entity.InformationTechnologySpecialist;
 import java.util.ArrayList;
 import java.util.List;
 
+import by.course.task2.factory.EmployeeFactory;
 import org.apache.log4j.Logger;
 
 public class EmployeeActions {
@@ -23,7 +24,7 @@ public class EmployeeActions {
         return sumOfNormalHours;
     }
 
-    public static List<Employee> getEmployeesFromSalaryRange(List<Employee> listOfEmployees, double minSalary, double maxSalary) {
+    public static List<Employee> getEmployeesWithSalaryRange(List<Employee> listOfEmployees, double minSalary, double maxSalary) {
         List<Employee> employeesSalaryRange = new ArrayList<>();
         try {
             for (Employee employee : listOfEmployees) {
@@ -40,11 +41,26 @@ public class EmployeeActions {
     public static void printEmployees(List<Employee> listOfEmployees) {
         try {
             for (Employee employee : listOfEmployees) {
-                System.out.println(employee.toString());
+                if (employee != null) {
+                    System.out.println(employee.toString());
+                }
             }
-            System.out.println();
         } catch (NullPointerException e) {
             log.error("Error in printEmployees");
+        } finally {
+            System.out.println();
         }
     }
+
+    public static List<Employee> getListOfEmployee(List<String> listOfEmployeeTxt) {
+        List<Employee> listOfEmployee = new ArrayList<>();
+        EmployeeFactory employeeFactory = new EmployeeFactory();
+        Employee employee;
+        for (String employeeString : listOfEmployeeTxt) {
+            employee = employeeFactory.createEmployee(employeeString);
+            listOfEmployee.add(employee);
+        }
+        return listOfEmployee;
+    }
+
 }

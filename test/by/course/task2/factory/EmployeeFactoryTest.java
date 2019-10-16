@@ -5,10 +5,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
+
 
 @RunWith(Parameterized.class)
 public class EmployeeFactoryTest {
@@ -21,18 +21,15 @@ public class EmployeeFactoryTest {
     }
 
     @Test
-    public void getListOfEmployeeTest() {
-        List<String> employeesString = new ArrayList<>();
-        employeesString.add(employee);
-
+    public void createEmployeeTest() {
         EmployeeFactory employeeFactory = new EmployeeFactory();
-        Assert.assertEquals(surname, employeeFactory.getListOfEmployee(employeesString).get(0).getSurname());
+        Assert.assertEquals(surname, employeeFactory.createEmployee(employee).getSurname());
     }
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         Object[][] data = new Object[][]{{"Janitor,Pupkin,Ivan,1000, , ,Full_time, , , ,", "Pupkin"},
-                                         {"Developer,Rebrov,Denis,1500.01,Middle,26, , ,Java, ,", "Rebrov"} };
+                {"Developer,Rebrov,Denis,1500.01,Middle,26, , ,Java, ,", "Rebrov"}};
         return Arrays.asList(data);
     }
 

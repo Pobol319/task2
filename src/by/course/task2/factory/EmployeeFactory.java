@@ -10,17 +10,7 @@ import java.util.List;
 public class EmployeeFactory {
     private static final Logger log = Logger.getLogger(EmployeeFactory.class);
 
-    public List<Employee> getListOfEmployee(List<String> listOfEmployeeTxt) {
-        List<Employee> listOfEmployee = new ArrayList<>();
-        Employee employee;
-        for (String employeeString : listOfEmployeeTxt) {
-            employee = createEmployee(employeeString);
-            listOfEmployee.add(employee);
-        }
-        return listOfEmployee;
-    }
-
-    private Employee createEmployee(String temp) {
+    public Employee createEmployee(String temp) {
         EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
         Employee employee;
         switch (employeeInfoParser.getEmployeePosition()) {
