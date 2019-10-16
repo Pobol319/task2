@@ -41,9 +41,7 @@ public class EmployeeActions {
     public static void printEmployees(List<Employee> listOfEmployees) {
         try {
             for (Employee employee : listOfEmployees) {
-                if (employee != null) {
-                    System.out.println(employee.toString());
-                }
+                System.out.println(employee.toString());
             }
         } catch (NullPointerException e) {
             log.error("Error in printEmployees");
@@ -58,7 +56,9 @@ public class EmployeeActions {
         Employee employee;
         for (String employeeString : listOfEmployeeTxt) {
             employee = employeeFactory.createEmployee(employeeString);
-            listOfEmployee.add(employee);
+            if (employee != null) {
+                listOfEmployee.add(employee);
+            }
         }
         return listOfEmployee;
     }
