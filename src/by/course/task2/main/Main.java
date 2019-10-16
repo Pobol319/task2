@@ -32,6 +32,7 @@ IT-фирма. Определить иерархию сотрудников. С�
 import by.course.task2.comparator.EmployeeNormalHoursComparator;
 import by.course.task2.comparator.EmployeeSalaryComparator;
 import by.course.task2.entity.Employee;
+import by.course.task2.exception.EmployeeException;
 import by.course.task2.reader.TxtReader;
 import by.course.task2.actions.EmployeeActions;
 
@@ -43,7 +44,7 @@ public class Main {
     private static final String ALL_EMPLOYEES_PATH = "resources\\employees.txt";
     private static final String DEVELOPER_TEAM_PATH = "resources\\developer_team.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws EmployeeException {
 
         TxtReader txtReader = new TxtReader();
         List<String> listOfEmployeeTxt = txtReader.getEmployeesFromText(ALL_EMPLOYEES_PATH);
