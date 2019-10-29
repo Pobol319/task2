@@ -1,0 +1,42 @@
+2019-10-29 22:25:44 INFO  TxtReader:45 - Validation of text from file is completed
+2019-10-29 22:25:44 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:69 - Set Ba fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:69 - Set Ba fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:44 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:45 - Null employee was created
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:79 - Set Tester fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:79 - Set Tester fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:64 - Set Janitor fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:45 - Null employee was created
+2019-10-29 22:25:45 INFO  TxtReader:45 - Validation of text from file is completed
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:53 - Set Employee fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:59 - Set IT specialist fields
+2019-10-29 22:25:45 INFO  EmployeeFactory:74 - Set Developer fields

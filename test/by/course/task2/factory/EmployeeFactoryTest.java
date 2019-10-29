@@ -23,7 +23,7 @@ public class EmployeeFactoryTest {
     @Test
     public void createEmployeeTest() {
         EmployeeFactory employeeFactory = new EmployeeFactory();
-        Assert.assertEquals(surname, employeeFactory.createEmployee(employee).getSurname());
+        Assert.assertEquals(surname, EmployeeFactory.createEmployee(employee).getSurname());
     }
 
     @Parameterized.Parameters

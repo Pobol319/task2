@@ -52,10 +52,9 @@ public class EmployeeActions {
 
     public static List<Employee> getListOfEmployee(List<String> listOfEmployeeTxt) {
         List<Employee> listOfEmployee = new ArrayList<>();
-        EmployeeFactory employeeFactory = new EmployeeFactory();
         Employee employee;
         for (String employeeString : listOfEmployeeTxt) {
-            employee = employeeFactory.createEmployee(employeeString);
+            employee = EmployeeFactory.createEmployee(employeeString);
             if (employee != null) {
                 listOfEmployee.add(employee);
             }

@@ -10,7 +10,7 @@ import java.util.List;
 public class EmployeeFactory {
     private static final Logger log = Logger.getLogger(EmployeeFactory.class);
 
-    public Employee createEmployee(String temp) {
+    public static Employee createEmployee(String temp) {
         EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
         Employee employee;
         switch (employeeInfoParser.getEmployeePosition()) {
@@ -46,35 +46,35 @@ public class EmployeeFactory {
         return null;
     }
 
-    private void setEmployeeFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
+    private static void setEmployeeFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         employee.setName(employeeInfoParser.getEmployeeName());
         employee.setSurname(employeeInfoParser.getEmployeeSurname());
         employee.setSalary(Double.parseDouble(employeeInfoParser.getEmployeeSalary()));
         log.info("Set Employee fields");
     }
 
-    private void setITSpecialistFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
+    private static void setITSpecialistFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((InformationTechnologySpecialist) employee).setRank(ITSpecialistRankEnum.valueOf(employeeInfoParser.getITSpecialistRank().toUpperCase()));
         ((InformationTechnologySpecialist) employee).setNormalHours(Double.parseDouble(employeeInfoParser.getITSpecialistNormalHours()));
         log.info("Set IT specialist fields");
     }
 
-    private void setJanitorFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
+    private static void setJanitorFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((Janitor) employee).setSchedule(JanitorScheduleEnum.valueOf(employeeInfoParser.getJanitorSchedule().toUpperCase()));
         log.info("Set Janitor fields");
     }
 
-    private void setBAFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
+    private static void setBAFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((BusinessAnalyst) employee).setLevelOfEnglish(BAEnglishLevelEnum.valueOf(employeeInfoParser.getBALevelOfEnglish()));
         log.info("Set Ba fields");
     }
 
-    private void setDevFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
+    private static void setDevFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((Developer) employee).setLanguageOfDevelopment(DevLanguageEnum.valueOf(employeeInfoParser.getDevLanguageOfDevelopment().toUpperCase()));
         log.info("Set Developer fields");
     }
 
-    private void setTesterFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
+    private static void setTesterFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((Tester) employee).setKnowledgeOfAutomation(TesterAutomationKnowledgeEnum.valueOf(employeeInfoParser.getTesterKnowledgeOfAutomation().toUpperCase()));
         log.info("Set Tester fields");
     }
