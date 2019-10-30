@@ -34,7 +34,7 @@ import by.course.task2.comparator.EmployeeSalaryComparator;
 import by.course.task2.entity.Employee;
 import by.course.task2.exception.EmployeeException;
 import by.course.task2.reader.TxtReader;
-import by.course.task2.actions.EmployeeActions;
+import by.course.task2.action.EmployeeActions;
 
 import java.util.List;
 

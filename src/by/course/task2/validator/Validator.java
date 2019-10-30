@@ -10,6 +10,10 @@ import static by.course.task2.constants.RegularExpressions.*;
 public class Validator {
     public static boolean isValidEmployee(String temp) {
 
+        if(temp == null){
+            return false;
+        }
+
         if (temp.isEmpty()) {
             return false;
         }

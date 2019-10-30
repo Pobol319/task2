@@ -1,4 +1,4 @@
-package by.course.task2.actions;
+package by.course.task2.action;
 
 import by.course.task2.entity.BusinessAnalyst;
 import by.course.task2.entity.Developer;

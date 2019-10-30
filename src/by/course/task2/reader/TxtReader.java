@@ -14,7 +14,7 @@ import java.util.List;
 import static by.course.task2.validator.Validator.isValidEmployee;
 
 public class TxtReader {
-    private static final Logger log = Logger.getLogger(TxtReader.class);
+    private static final Logger LOG = Logger.getLogger(TxtReader.class);
 
     private List<String> getTextFromFile(String path) throws EmployeeException {
         File file = new File(path);
@@ -25,11 +25,11 @@ public class TxtReader {
                 textFromFile.add(temp);
             }
             if (textFromFile.isEmpty()) {
-                log.error(String.format(" File  \"%s%n\" is empty", file.getName()));
+                LOG.error(String.format(" File  \"%s%n\" is empty", file.getName()));
                 throw new EmployeeException(String.format(" File  \"%s%n\" is empty", file.getName()));
             }
         } catch (IOException e2) {
-            log.error("Error receiving text");
+            LOG.error("Error receiving text");
         }
         return textFromFile;
     }
@@ -42,7 +42,7 @@ public class TxtReader {
                 listOfEmployees.add(temp);
             }
         }
-        log.info("Validation of text from file is completed");
+        LOG.info("Validation of text from file is completed");
         return listOfEmployees;
     }
 

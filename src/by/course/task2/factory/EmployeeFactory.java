@@ -4,11 +4,8 @@ import by.course.task2.entity.*;
 import by.course.task2.parser.EmployeeInfoParser;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class EmployeeFactory {
-    private static final Logger log = Logger.getLogger(EmployeeFactory.class);
+    private static final Logger LOG = Logger.getLogger(EmployeeFactory.class);
 
     public static Employee createEmployee(String temp) {
         EmployeeInfoParser employeeInfoParser = new EmployeeInfoParser(temp);
@@ -42,7 +39,7 @@ public class EmployeeFactory {
                 return employee;
             }
         }
-        log.info("Null employee was created");
+        LOG.info("Null employee was created");
         return null;
     }
 
@@ -50,32 +47,32 @@ public class EmployeeFactory {
         employee.setName(employeeInfoParser.getEmployeeName());
         employee.setSurname(employeeInfoParser.getEmployeeSurname());
         employee.setSalary(Double.parseDouble(employeeInfoParser.getEmployeeSalary()));
-        log.info("Set Employee fields");
+        LOG.info("Set Employee fields");
     }
 
     private static void setITSpecialistFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((InformationTechnologySpecialist) employee).setRank(ITSpecialistRankEnum.valueOf(employeeInfoParser.getITSpecialistRank().toUpperCase()));
         ((InformationTechnologySpecialist) employee).setNormalHours(Double.parseDouble(employeeInfoParser.getITSpecialistNormalHours()));
-        log.info("Set IT specialist fields");
+        LOG.info("Set IT specialist fields");
     }
 
     private static void setJanitorFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((Janitor) employee).setSchedule(JanitorScheduleEnum.valueOf(employeeInfoParser.getJanitorSchedule().toUpperCase()));
-        log.info("Set Janitor fields");
+        LOG.info("Set Janitor fields");
     }
 
     private static void setBAFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((BusinessAnalyst) employee).setLevelOfEnglish(BAEnglishLevelEnum.valueOf(employeeInfoParser.getBALevelOfEnglish()));
-        log.info("Set Ba fields");
+        LOG.info("Set Ba fields");
     }
 
     private static void setDevFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((Developer) employee).setLanguageOfDevelopment(DevLanguageEnum.valueOf(employeeInfoParser.getDevLanguageOfDevelopment().toUpperCase()));
-        log.info("Set Developer fields");
+        LOG.info("Set Developer fields");
     }
 
     private static void setTesterFields(Employee employee, EmployeeInfoParser employeeInfoParser) {
         ((Tester) employee).setKnowledgeOfAutomation(TesterAutomationKnowledgeEnum.valueOf(employeeInfoParser.getTesterKnowledgeOfAutomation().toUpperCase()));
-        log.info("Set Tester fields");
+        LOG.info("Set Tester fields");
     }
 }
